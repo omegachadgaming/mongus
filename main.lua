@@ -16,7 +16,7 @@ local letters = {
         "⬛⬛⬛⬛⬛",
         "⬛🔴🔴🔴⬛",
         "⬛🔴⬛🔴⬛",
-        "⬛🔴🔴🔴⬛",
+        "⬛🔴🔴⬛⬛",
         "⬛🔴⬛🔴⬛",
         "⬛🔴🔴🔴⬛",
         "⬛⬛⬛⬛⬛",
@@ -32,11 +32,11 @@ local letters = {
     },
     ["d"] = {
         "⬛⬛⬛⬛⬛",
-        "⬛🔴🔴🔴⬛",
+        "⬛🔴🔴⬛⬛",
         "⬛🔴⬛🔴⬛",
         "⬛🔴⬛🔴⬛",
         "⬛🔴⬛🔴⬛",
-        "⬛🔴🔴🔴⬛",
+        "⬛🔴🔴⬛⬛",
         "⬛⬛⬛⬛⬛",
     },
     ["e"] = {
@@ -113,11 +113,11 @@ local letters = {
     },
     ["m"] = {
         "⬛⬛⬛⬛⬛",
-        "⬛🔴🔴🔴⬛",
-        "⬛🔴⬛🔴⬛",
-        "⬛🔴⬛🔴⬛",
-        "⬛🔴⬛🔴⬛",
-        "⬛🔴⬛🔴⬛",
+        "🔴⬛⬛⬛🔴",
+        "🔴🔴⬛🔴🔴",
+        "🔴⬛🔴⬛🔴",
+        "🔴⬛⬛⬛🔴",
+        "🔴⬛⬛⬛🔴",
         "⬛⬛⬛⬛⬛", 
     },
     ["n"] = {
@@ -255,9 +255,9 @@ local oldNameCall = gmt.__namecall
 
 game.StarterGui:SetCore("SendNotification", {
     Title = 'Prefix your message with '.. prefix,
-    Text = 'Made by LabGuy94',
-    Icon = '',
-    Duration = 5,
+	Text = 'Made by LabGuy94',
+	Icon = '',
+	Duration = 5,
 })
 
 gmt.__namecall = newcclosure(function(self, ...)
@@ -276,7 +276,7 @@ gmt.__namecall = newcclosure(function(self, ...)
             for _, v in pairs(final) do
                 game:GetService("ReplicatedStorage")["DefaultChatSystemChatEvents"].SayMessageRequest:FireServer(v, "All")
             end
-            return nil
+            return wait(9e9)
         end
     end
     return oldNameCall(self, ...)
